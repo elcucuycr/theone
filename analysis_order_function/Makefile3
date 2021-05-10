@@ -1,0 +1,7 @@
+#this is Makefile of 动态库链接
+main3.out:libdynamicfun.so  main.c
+	gcc main.c -o main3.out -L. -ldynamicfun
+libdynamicfun.so:analysis_order.c
+	gcc -shared -fpic -o libdynamicfun.so analysis_order.c
+clean:
+	rm -f main3.out *.so

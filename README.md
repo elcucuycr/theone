@@ -1,1 +1,4 @@
 # theone
+Makefile为静态链接的makefile文档
+Makefile2为静态库链接的makefile文档
+Makefile3为动态库链接的makefile文档

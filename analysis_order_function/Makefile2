@@ -1,0 +1,9 @@
+#this is makefile for 静态库链接
+main2.out:libstaticfun.a main.c
+	gcc main.c -o main2.out -L. -lstaticfun
+analysis_order.o:analysis_order.c
+	gcc -c analysis_order.c -o analysis_order.o
+libstaticfun.a:analysis_order.o
+	ar -r libstaticfun.a analysis_order.o
+clean:
+	rm -f *.o *.a main2.out
